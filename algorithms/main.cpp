@@ -4,11 +4,11 @@
 #include <iostream>
 
 
-#include "509. Fibonacci_Number/FibonacciNumber.h"
+#include "1137. N-th_Tribonacci_Number/nthTribonacciNumber.h"
 
 using namespace std;
 int main()
 {
-  auto alg = new Solution01();
-  cout << alg->fib(3) << endl;
+  auto alg = new Solution();
+  cout << alg->tribonacci(3) << endl;
 }
