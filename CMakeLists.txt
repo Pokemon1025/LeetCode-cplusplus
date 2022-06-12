@@ -7,4 +7,5 @@ add_executable(LeetCode_cplusplus
         "algorithms/509. Fibonacci_Number/FibonacciNumber.h"
         "algorithms/1137. N-th_Tribonacci_Number/nthTribonacciNumber.h"
         "algorithms/46. Permutations/permutations.h"
+        "algorithms/121. Best_Time_to_Buy_and_Sell_Stock/bestTimeToBuyAndSellStock.h"
         algorithms/main.cpp)
