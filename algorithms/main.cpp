@@ -4,15 +4,15 @@
 #include <iostream>
 #include <vector>
 
-#include "121. Best_Time_to_Buy_and_Sell_Stock/bestTimeToBuyAndSellStock.h"
+#include "222. Count_Complete_Tree_Nodes/countCompleteTreeNodes.h"
 
 using namespace std;
 
 int main()
 {
-  vector<int> prices = {7,1,5,3,6,4};
-
   auto alg = new Solution();
-  cout << alg->maxProfit(prices) << endl;
-
+  vector<int> data = {1, 2, 3, 4, 5, 6};
+  TreeNode *root = alg->helper(data, 0);
+  cout << alg->countNodes(root) << endl;
 }
+
