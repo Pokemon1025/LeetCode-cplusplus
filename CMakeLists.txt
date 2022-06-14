@@ -9,4 +9,5 @@ add_executable(LeetCode_cplusplus
         "algorithms/46. Permutations/permutations.h"
         "algorithms/121. Best_Time_to_Buy_and_Sell_Stock/bestTimeToBuyAndSellStock.h"
         "algorithms/222. Count_Complete_Tree_Nodes/countCompleteTreeNodes.h"
+        "algorithms/704. Binary_Search/binarySearch.h"
         algorithms/main.cpp)

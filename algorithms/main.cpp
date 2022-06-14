@@ -4,15 +4,14 @@
 #include <iostream>
 #include <vector>
 
-#include "222. Count_Complete_Tree_Nodes/countCompleteTreeNodes.h"
+#include "704. Binary_Search/binarySearch.h"
 
 using namespace std;
 
 int main()
 {
-  auto alg = new Solution();
-  vector<int> data = {1, 2, 3, 4, 5, 6};
-  TreeNode *root = alg->helper(data, 0);
-  cout << alg->countNodes(root) << endl;
+  auto alg = new Solution02();
+  vector<int> data = {-1, 0, 3, 5, 9, 12};
+  cout << alg->search(data, 9) << endl;
 }
 
