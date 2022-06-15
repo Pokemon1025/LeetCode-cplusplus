@@ -4,14 +4,15 @@
 #include <iostream>
 #include <vector>
 
-#include "704. Binary_Search/binarySearch.h"
+#include "150. Evaluate_Reverse_Polish_Notation/evaluateReversePolishNotation.h"
 
 using namespace std;
 
 int main()
 {
-  auto alg = new Solution02();
-  vector<int> data = {-1, 0, 3, 5, 9, 12};
-  cout << alg->search(data, 9) << endl;
+  auto alg = new Solution();
+  vector<string> tokens = {"10", "6", "9",  "3", "+", "-11", "*",
+                           "/",  "*", "17", "+", "5", "+"};
+  cout << alg->evalRPN(tokens) << endl;
 }
 
