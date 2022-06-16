@@ -4,15 +4,26 @@
 #include <iostream>
 #include <vector>
 
-#include "150. Evaluate_Reverse_Polish_Notation/evaluateReversePolishNotation.h"
+#include "206. Reverse_Linked_List/reverseLinkedList.h"
+#include "List/707. Design_Linked_List.h"
 
 using namespace std;
 
-int main()
-{
-  auto alg = new Solution();
-  vector<string> tokens = {"10", "6", "9",  "3", "+", "-11", "*",
-                           "/",  "*", "17", "+", "5", "+"};
-  cout << alg->evalRPN(tokens) << endl;
+int main() {
+  auto *linked_list = new MyLinkedList();
+  // 初始化链表1->2->3->4->5->null
+  linked_list->addAtHead(1);
+  linked_list->addAtTail(5);
+  for (int i = 1; i < 4; i++) {
+    linked_list->addAtIndex(i, i + 1);
+  }
+  linked_list->printLinkedList();
+  auto *alg = new Solution01();
+  auto *reverse = alg->reverseList(
+      reinterpret_cast<ListNode *>(linked_list->GetLinkedList()));
+  while (reverse != nullptr && reverse->val != 0) {
+    cout << reverse->val << " ";
+    reverse = reverse->next;
+  }
+  cout << endl;
 }
-

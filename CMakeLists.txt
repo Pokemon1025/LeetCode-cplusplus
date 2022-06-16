@@ -11,4 +11,6 @@ add_executable(LeetCode_cplusplus
         "algorithms/222. Count_Complete_Tree_Nodes/countCompleteTreeNodes.h"
         "algorithms/704. Binary_Search/binarySearch.h"
         "algorithms/150. Evaluate_Reverse_Polish_Notation/evaluateReversePolishNotation.h"
+        "algorithms/206. Reverse_Linked_List/reverseLinkedList.h"
+        "algorithms/List/707. Design_Linked_List.h"
         algorithms/main.cpp)
