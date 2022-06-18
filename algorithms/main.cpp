@@ -4,26 +4,19 @@
 #include <iostream>
 #include <vector>
 
-#include "206. Reverse_Linked_List/reverseLinkedList.h"
-#include "List/707. Design_Linked_List.h"
+#include "List/146. LRU_Cache.h"
 
 using namespace std;
 
 int main() {
-  auto *linked_list = new MyLinkedList();
-  // 初始化链表1->2->3->4->5->null
-  linked_list->addAtHead(1);
-  linked_list->addAtTail(5);
-  for (int i = 1; i < 4; i++) {
-    linked_list->addAtIndex(i, i + 1);
-  }
-  linked_list->printLinkedList();
-  auto *alg = new Solution01();
-  auto *reverse = alg->reverseList(
-      reinterpret_cast<ListNode *>(linked_list->GetLinkedList()));
-  while (reverse != nullptr && reverse->val != 0) {
-    cout << reverse->val << " ";
-    reverse = reverse->next;
-  }
-  cout << endl;
+  auto lRUCache = new LRUCache(2);
+  lRUCache->put(1, 1); // cache is {1=1}
+  lRUCache->put(2, 2); // cache is {1=1, 2=2}
+  lRUCache->get(1);    // return 1
+  lRUCache->put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+  lRUCache->get(2);    // returns -1 (not found)
+  lRUCache->put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+  lRUCache->get(1);    // return -1 (not found)
+  lRUCache->get(3);    // return 3
+  lRUCache->get(4);    // return 4
 }

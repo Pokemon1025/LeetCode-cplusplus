@@ -13,4 +13,5 @@ add_executable(LeetCode_cplusplus
         "algorithms/150. Evaluate_Reverse_Polish_Notation/evaluateReversePolishNotation.h"
         "algorithms/206. Reverse_Linked_List/reverseLinkedList.h"
         "algorithms/List/707. Design_Linked_List.h"
+        "algorithms/List/146. LRU_Cache.h"
         algorithms/main.cpp)
