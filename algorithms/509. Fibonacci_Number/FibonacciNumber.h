@@ -31,3 +31,55 @@ public:
     return static_cast<int>(round(fibN));
   }
 };
+
+// 3.dp
+// 时间复杂度：O(n)
+// 空间复杂度：O(n)
+#include <vector>
+class Solution03 {
+public:
+  int fib(int N) {
+    if (N <= 1) return N;
+    vector<int> dp(N + 1);
+    dp[0] = 0;
+    dp[1] = 1;
+    for (int i = 2; i <= N; i++) {
+      dp[i] = dp[i - 1] + dp[i - 2];
+    }
+    return dp[N];
+  }
+};
+
+// 4.dp - 空间优化
+// 时间复杂度：O(n)
+// 空间复杂度：O(1)
+class Solution04 {
+public:
+  int fib(int N) {
+    if (N <= 1)
+      return N;
+    // 1)确定dp数组（dp table）以及下标的含义:第i个数的斐波那契数值是dp[i]
+    int dp[2];
+    // 3)dp数组如何初始化
+    dp[0] = 0;
+    dp[1] = 1;
+    // 4)确定遍历顺序
+    for (int i = 2; i <= N; i++) {
+      // 2)确定递推公式:状态转移方程 dp[i] = dp[i - 1] + dp[i - 2];
+      int sum = dp[0] + dp[1];
+      dp[0] = dp[1];
+      dp[1] = sum;
+      // dp[i] = dp[i - 1] + dp[i - 2];
+    }
+    return dp[1];
+  }
+};
+
+// 5.递归
+class Solution05 {
+public:
+  int fib(int N) {
+    if (N < 2) return N;
+    return fib(N - 1) + fib(N - 2);
+  }
+};
