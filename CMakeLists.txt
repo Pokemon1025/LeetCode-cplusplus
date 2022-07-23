@@ -3,15 +3,28 @@ project(LeetCode_cplusplus)
 
 set(CMAKE_CXX_STANDARD 14)
 
+# The folder with Google Test sources
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/third-party/googletest)
+include_directories(googletest/include googletest)
+
+include_directories(
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/70.\ Climbing_Stairs
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/509.\ Fibonacci_Number
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/List
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/46.\ Permutations
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/121.\ Best_Time_to_Buy_and_Sell_Stock
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/150.\ Evaluate_Reverse_Polish_Notation
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/206.\ Reverse_Linked_List
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/222.\ Count_Complete_Tree_Nodes
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/704.\ Binary_Search
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/1137.\ N-th_Tribonacci_Number
+)
+
+
+# Source files with tests
 add_executable(LeetCode_cplusplus
-        "algorithms/509. Fibonacci_Number/FibonacciNumber.h"
-        "algorithms/1137. N-th_Tribonacci_Number/nthTribonacciNumber.h"
-        "algorithms/46. Permutations/permutations.h"
-        "algorithms/121. Best_Time_to_Buy_and_Sell_Stock/bestTimeToBuyAndSellStock.h"
-        "algorithms/222. Count_Complete_Tree_Nodes/countCompleteTreeNodes.h"
-        "algorithms/704. Binary_Search/binarySearch.h"
-        "algorithms/150. Evaluate_Reverse_Polish_Notation/evaluateReversePolishNotation.h"
-        "algorithms/206. Reverse_Linked_List/reverseLinkedList.h"
-        "algorithms/List/707. Design_Linked_List.h"
-        "algorithms/List/146. LRU_Cache.h"
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/70.\ Climbing_Stairs/ClimbingStairsTest.cpp
         algorithms/main.cpp)
+
+target_link_libraries(LeetCode_cplusplus gtest gtest_main)
