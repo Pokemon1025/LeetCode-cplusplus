@@ -2,14 +2,13 @@
 // Created by 朱玥 on 2022/6/12.
 //
 #pragma once
-//1.动态规划 + 降维 - 状态数组空间压缩
+//1.动态规划 + 降维 - 状态数组空间压缩【推荐】
 //时间复杂度:O(n) 空间复杂度:O(1)
 class Solution01 {
 public:
   int fib(int n) {
-    if (n < 2)  return n;
+    if (n <= 1) return n;
     int prev = 0, cur = 1;
-
     for (int i = 2; i <= n; ++i) {
       cur += prev;
       prev = cur - prev;
