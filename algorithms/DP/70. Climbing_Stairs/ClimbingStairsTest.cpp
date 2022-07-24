@@ -7,11 +7,11 @@
 
 class ClimbingStairsTest : public testing::Test {
 protected:
-  virtual void TearDown() {}
-  virtual void SetUp() {}
+  void TearDown() override {}
+  void SetUp() override {}
 };
 
-TEST(Solution01, TestSolution01) {
+TEST(ClimbingStairsTest, TestSolution01) {
   Solution01 s;
   EXPECT_EQ(13, s.climbStairs(6));
 }
