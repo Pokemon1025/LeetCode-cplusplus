@@ -39,11 +39,12 @@ public:
 class Solution02 {
 public:
   int uniquePaths(int m, int n) {
-    vector<int> dp(n, 1);
+    vector<int> dp(n, 1);//先初始化一维数组，有n列
     // for (int i = 0; i < n; i++) dp[i] = 1;
-    for (int j = 1; j < m; j++) {
-      for (int i = 1; i < n; i++) {
-        dp[i] += dp[i - 1];
+    // 按行遍历，将每行中的列值计算填充
+    for (int i = 1; i < m; i++) {
+      for (int j = 1; j < n; j++) {
+        dp[j] += dp[j - 1];
       }
     }
     return dp[n - 1];
