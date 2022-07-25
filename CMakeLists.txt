@@ -26,6 +26,7 @@ include_directories(
 add_executable(LeetCode_cplusplus
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/70.\ Climbing_Stairs/ClimbingStairsTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/62.\ Unique_Paths/UniquePathsTest.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/96.\ Unique_Binary_Search_Trees/UniqueBinarySearchTreesTest.cpp
         algorithms/main.cpp)
 
 target_link_libraries(LeetCode_cplusplus gtest gtest_main)
