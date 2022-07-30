@@ -31,6 +31,7 @@ add_executable(LeetCode_cplusplus
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/494.\ Target_Sum/TargetSumTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/322.\ Coin_Change/CoinChangeTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/279.\ Perfect_Squares/PerfectSquaresTest.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/139.\ Word_Break/WordBreakTest.cpp
         algorithms/main.cpp)
 
 target_link_libraries(LeetCode_cplusplus gtest gtest_main)
