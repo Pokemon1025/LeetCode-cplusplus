@@ -33,6 +33,7 @@ add_executable(LeetCode_cplusplus
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/279.\ Perfect_Squares/PerfectSquaresTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/139.\ Word_Break/WordBreakTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/198.\ House_Robber/HouseRobberTest.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/300.\ Longest_Increasing_Subsequence/LongestIncreasingSubsequenceTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/121.\ Best_Time_to_Buy_and_Sell_Stock/BestTimeToBuyAndSellStockTest.cpp
         algorithms/main.cpp)
 
