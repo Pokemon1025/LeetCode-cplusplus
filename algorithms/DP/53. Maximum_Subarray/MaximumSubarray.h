@@ -8,20 +8,21 @@
 
 using namespace std;
 
+// dp[i]只有两个方向可以推出来：
+// dp[i - 1] + nums[i]，即：nums[i]加入当前连续子序列和
+// nums[i]，即：从头开始计算当前连续子序列和
+// 时间复杂度：O(n)
+// 空间复杂度：O(n)
 class Solution {
 public:
-  int maxSubVec(vector<int>& nums) {
-    if (nums.size() <= 1)
-      return nums.size();
-    vector<int> dp(nums.size(), 1);
-    int result = 0;
+  int maxSubArray(vector<int> &nums) {
+    if (nums.empty()) return 0;
+    vector<int> dp(nums.size());
+    dp[0] = nums[0];//dp[i]：包括下标i之前的最大连续子序列和为dp[i]
+    int result = dp[0];
     for (int i = 1; i < nums.size(); i++) {
-      for (int j = 0; j < i; j++) {
-        if (nums[i] > nums[j])
-          dp[i] = max(dp[i], dp[j] + 1);
-      }
-      if (dp[i] > result)
-        result = dp[i];
+      dp[i] = max(dp[i - 1] + nums[i], nums[i]); // 状态转移公式
+      result = max(dp[i], result);               // result 保存dp[i]的最大值
     }
     return result;
   }
