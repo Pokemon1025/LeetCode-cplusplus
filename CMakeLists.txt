@@ -36,6 +36,7 @@ add_executable(LeetCode_cplusplus
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/300.\ Longest_Increasing_Subsequence/LongestIncreasingSubsequenceTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/53.\ Maximum_Subarray/MaximumSubarrayTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/72.\ Edit_Distance/EditDistanceTest.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/647.\ Palindromic_Substrings/PalindromicSubstringsTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/121.\ Best_Time_to_Buy_and_Sell_Stock/BestTimeToBuyAndSellStockTest.cpp
         algorithms/main.cpp)
 
