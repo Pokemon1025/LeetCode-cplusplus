@@ -11,7 +11,17 @@ protected:
   void SetUp() override {}
 };
 
-TEST(PalindromicSubstringsTest, TestSolution) {
-  Solution s;
+TEST(PalindromicSubstringsTest, TestSolution01) {
+  Solution01 s;
+  EXPECT_EQ(6, s.countSubstrings("aaa"));
+}
+
+TEST(PalindromicSubstringsTest, TestSolution02) {
+  Solution02 s;
+  EXPECT_EQ(6, s.countSubstrings("aaa"));
+}
+
+TEST(PalindromicSubstringsTest, TestSolution03) {
+  Solution03 s;
   EXPECT_EQ(6, s.countSubstrings("aaa"));
 }
