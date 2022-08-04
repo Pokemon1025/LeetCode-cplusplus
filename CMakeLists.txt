@@ -41,6 +41,7 @@ add_executable(LeetCode_cplusplus
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/DP/516.\ Longest_Palindromic_Subsequence/LongestPalindromicSubsequenceTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/121.\ Best_Time_to_Buy_and_Sell_Stock/BestTimeToBuyAndSellStockTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/344.\ Reverse_String/ReverseStringTest.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/541.\ Reverse_String_II/ReverseStringIITest.cpp
         algorithms/main.cpp)
 
 target_link_libraries(LeetCode_cplusplus gtest gtest_main)
