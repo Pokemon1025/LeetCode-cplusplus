@@ -43,6 +43,7 @@ add_executable(LeetCode_cplusplus
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/344.\ Reverse_String/ReverseStringTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/541.\ Reverse_String_II/ReverseStringIITest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/剑指Offer05.\ 替换空格_LCOF/LCOFTest.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/151.\ Reverse_Words_in_a_String/ReverseWordsInAStringTest.cpp
         algorithms/main.cpp)
 
 target_link_libraries(LeetCode_cplusplus gtest gtest_main)
