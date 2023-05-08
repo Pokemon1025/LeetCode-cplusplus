@@ -20,6 +20,8 @@ include_directories(
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/704.\ Binary_Search
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/1137.\ N-th_Tribonacci_Number
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/String
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/Array
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/Array/1.\ Two\ Sum
 )
 
 
@@ -44,6 +46,8 @@ add_executable(LeetCode_cplusplus
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/541.\ Reverse_String_II/ReverseStringIITest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/剑指Offer05.\ 替换空格_LCOF/LCOFTest.cpp
         ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/151.\ Reverse_Words_in_a_String/ReverseWordsInAStringTest.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/String/剑指Offer58-II.\ 左旋转字符串/LCOF_Test.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/algorithms/Array/1.\ Two\ Sum/twoSumTest.cpp
         algorithms/main.cpp)
 
 target_link_libraries(LeetCode_cplusplus gtest gtest_main)
